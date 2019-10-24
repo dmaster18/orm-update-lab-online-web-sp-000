@@ -22,7 +22,7 @@ class Student
   
   def save 
     if self.id != nil
-      
+      sql = "UPDATE students SET name, grade = ?, ?"
       
       
     else
