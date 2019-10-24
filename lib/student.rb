@@ -20,10 +20,14 @@ class Student
     DB[:conn].execute(sql)
   end
   
+  def update 
+  sql = "UPDATE students SET name, grade = ?, ?"
+      DB[:conn].execute(sql, self.name, self.grade)
+  end 
+  
   def save 
     if self.id != nil
-      sql = "UPDATE students SET name, grade = ?, ?"
-      DB[:conn].execute(sql, self.name, self.grade)
+      
     else
       sql = "INSERT INTO students (name, grade) VALUES (?, ?)"
       DB[:conn].execute(sql, self.name, self.grade)
