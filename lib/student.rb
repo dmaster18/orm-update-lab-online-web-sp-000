@@ -4,7 +4,7 @@ class Student
   
   attr_accessor :id, :name, :grade
   
-  def initialize (id, name, grade)
+  def initialize (name, grade, id = nil)
     @id = id
     @name = name
     @grade = grade
@@ -21,6 +21,7 @@ class Student
   end
   
   def self.create(name, grade)
+    student.new()
     
   end
   # Remember, you can access your database connection anywhere in this class
