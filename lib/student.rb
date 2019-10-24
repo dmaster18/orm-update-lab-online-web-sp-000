@@ -22,6 +22,7 @@ class Student
   
   def self.create(name, grade)
     Student.new(name, grade)
+    sql = "INSERT INTO students (name, grade) VALUES (?, ?)"
     
   end
   # Remember, you can access your database connection anywhere in this class
