@@ -21,7 +21,8 @@ class Student
   end
   
   def save 
-    if 
+    if self.id != nil
+      
       
       
     else
